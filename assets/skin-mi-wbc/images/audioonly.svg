@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 140 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;">
+    <g id="g1" transform="matrix(1,0,0,1,32.5,32.5)">
+        <g opacity="0.796545">
+            <g id="polygon1" transform="matrix(1,0,0,1,0,-0.201849)">
+                <path d="M39.389,13.769C36.53,8.078 22.235,28.606 22.235,28.606L6,28.606L6,47.699L21.989,47.699C21.989,47.699 36.489,68.405 39.389,62.75C42.289,57.095 42.248,19.46 39.389,13.769Z" style="fill:none;stroke:white;stroke-width:2px;"/>
+            </g>
+            <path id="path1" d="M48.128,49.03C50.057,45.934 51.19,42.291 51.19,38.377C51.19,34.399 50.026,30.703 48.043,27.577" style="fill:none;stroke:white;stroke-width:2px;"/>
+            <path id="path2" d="M55.082,20.537C58.777,25.523 60.966,31.694 60.966,38.377C60.966,44.998 58.815,51.115 55.178,56.076" style="fill:none;stroke:white;stroke-width:2px;"/>
+            <path id="path11" d="M61.71,62.611C66.977,55.945 70.128,47.531 70.128,38.378C70.128,29.161 66.936,20.696 61.609,14.01" style="fill:none;stroke:white;stroke-width:2px;"/>
+        </g>
+    </g>
+</svg>

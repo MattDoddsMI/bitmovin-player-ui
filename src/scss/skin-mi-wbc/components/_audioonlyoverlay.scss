@@ -1,0 +1,42 @@
+@import '../variables';
+@import '../mixins';
+
+// H/V center items in the middle of the overlay
+%center-items-in-overlay {
+  display: table;
+
+  > .#{$prefix}-container-wrapper {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+.#{$prefix}-ui-audioonly-overlay {
+  @extend %ui-container;
+  @extend %center-items-in-overlay;
+
+  @include layout-cover;
+  @include hidden;
+
+  @keyframes breathe {
+    30% {
+      transform: scale(1.05);
+    }
+
+    60% {
+      transform: scale(1);
+    }
+  }
+}
+
+.#{$prefix}-ui-audioonly-overlay-indicator {
+  animation: breathe 10s ease-in-out infinite;
+  background-color: $color-black;
+  background-image: svg('assets/skin-mi-wbc/images/audioonly.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+

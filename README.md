@@ -67,7 +67,7 @@ When using the built-in UI, you can style it to your linking with CSS by overwri
 
 It is possible to override which `js` and `css` files the player loads for its internal UI with the `ui` and `ui_css` properties in the `location` section of the player configuration. This is a simple way to supply a customized UI without the overhead of managing an external UI instance, and especially helpful for supplying a custom script which otherwise cannot be overridden like the CSS styles can. The paths to the `ui` (`js`) and `ui_css` (obviously `css`) files can be absolute or relative. Both are optional and do not need to be specified together.
 
-The player constructs its internal UI instance from the `UIManager.Factory.buildDefaultUI(player)` factory method, so this entry point must exist for this approach to work. The base class of the UI skin (e.g. the default `bmpui-ui-skin-modern`) must also match between the JS and CSS.
+The player constructs its internal UI instance from the `UIManager.Factory.buildDefaultUI(player)` factory method, so this entry point must exist for this approach to work. The base class of the UI skin (e.g. the default `mi-wbc-ui-skin-mi-wbc`) must also match between the JS and CSS.
 
 ```js
 var config = {
@@ -122,7 +122,7 @@ var mySimpleUi = new bitmovin.playerui.UIContainer({
   components: [
     new bitmovin.playerui.PlaybackToggleOverlay()
   ],
-  cssClasses: ['ui-skin-modern']
+  cssClasses: ['ui-skin-mi-wbc']
 });
 
 bitmovin.player('player-id').setup(config).then(function (player) {
@@ -213,7 +213,7 @@ var myUi = new bitmovin.playerui.UIContainer({
     new bitmovin.playerui.Label({ text: "A label" }),
     new bitmovin.playerui.Label({ text: "A hidden label", hidden: true })
   ],
-  cssClasses: ['ui-skin-modern']
+  cssClasses: ['ui-skin-mi-wbc']
 });
 ```
 

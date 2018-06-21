@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- CSS //-->
+    <link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous" />
+    <!-- Load the custom UI CSS //-->
+    <link type="text/css" rel="stylesheet" href="css/mi-wbc-ui.css" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" /><link href="//fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" />
+
+    <!-- JS //-->
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <!-- Flowplayer skin -->
+    <link rel="stylesheet" href="https://releases.flowplayer.org/7.2.4/skin/skin.css" />
+
+    <!-- Flowplayer core -->
+    <script src="https://releases.flowplayer.org/7.2.4/commercial/flowplayer.min.js"></script>
+    <!-- Flowplayer hlsjs plugin -->
+    <script src="https://releases.flowplayer.org/hlsjs/flowplayer.hlsjs.light.min.js"></script>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-right">
+          <img src="//www.movingimage.com/wp-content/themes/movingimage/img/movingimage_logo.svg" style="padding-top: 7px; width: 180px;" />
+          <div>WBC Custom Player Skins - Flowplayer</div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="player" class="col-sm-12"></div>
+      </div>
+      <div class="row">
+        <div id="console" class="col-sm-12">
+          <div class="col-sm-1"><div class="form-label">Console: </div></div>
+          <div class="col-sm-11">
+            <textarea id="console-output"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      flowplayer('#player', {
+        splash: 'https://flowplayer.com/media/img/demos/functional@x2.jpg',
+        aspectRatio: "12:5",
+        key: '$77068834645103',
+        clip: {
+          hlsQualities: [-1, 1, 3, 6, 7],
+          sources: [
+            { type: 'application/x-mpegurl', src: 'https://mi-msl4-amd.akamaized.net/hls/live/622389/MattStream_en/MattStream_en_all/playlist.m3u8' }
+          ]
+        }
+      })
+    </script>
+  </body>
+</html>

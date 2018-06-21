@@ -37,17 +37,21 @@ var combine = require('stream-combiner2');
 
 var paths = {
   source: {
+    css: ['./src/html/css/*.css'],
+    js: ['./src/html/js/*.js'],
     html: ['./src/html/*.html'],
     tsmain: ['./src/ts/main.ts'],
     ts: ['./src/ts/**/*.ts'],
-    sass: ['./src/scss/**/*.scss']
+    sass: ['./src/scss/**/*.scss'],
+    images: ['./src/html/img/*.+(png|jpg|svg|gif)', './assets/**/*.*']
   },
   target: {
     html: './dist',
     js: './dist/js',
     jsframework: './dist/js/framework',
-    jsmain: 'bitmovinplayer-ui.js',
-    css: './dist/css'
+    jsmain: 'wbc-player-ui.js',
+    css: './dist/css',
+    images: './dist/img'
   }
 };
 
@@ -118,6 +122,24 @@ gulp.task('html', function() {
   .pipe(gulp.dest(paths.target.html));
 });
 
+// Copies image files to the target directory
+gulp.task('images', function () {
+  return gulp.src(paths.source.images)
+    .pipe(gulp.dest(paths.target.images));
+});
+
+// Copies css files to the target directory
+gulp.task('css', function () {
+  return gulp.src(paths.source.css)
+    .pipe(gulp.dest(paths.target.css));
+});
+
+// Copies js files to the target directory
+gulp.task('js', function () {
+  return gulp.src(paths.source.js)
+    .pipe(gulp.dest(paths.target.js));
+});
+
 // Compiles JS and TypeScript to JS in the target directory
 gulp.task('browserify', function() {
   var browserifyBundle = browserifyInstance.bundle();
@@ -186,7 +208,7 @@ gulp.task('build', function(callback) {
   // First run 'clean', then the other tasks
   // TODO remove runSequence on Gulp 4.0 and use built in serial execution instead
   runSequence('clean',
-    ['html', 'browserify', 'sass'],
+    ['html', 'images', 'css', 'js', 'browserify', 'sass'],
     callback);
 });
 
@@ -229,6 +251,7 @@ gulp.task('serve', function() {
 
     gulp.watch(paths.source.sass, ['sass']);
     gulp.watch(paths.source.html).on('change', function() { runSequence('html', browserSync.reload); });
+    gulp.watch(paths.source.js).on('change', function() { runSequence('js', browserSync.reload); });
     catchBrowserifyErrors = true;
     gulp.watch(paths.source.ts, ['browserify']);
   });
