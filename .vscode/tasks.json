@@ -9,6 +9,21 @@
             "problemMatcher": [
                 "$gulp-tsc"
             ]
+        },
+        {
+            "type": "gulp",
+            "task": "sass",
+            "problemMatcher": []
+        },
+        {
+            "type": "gulp",
+            "task": "clean",
+            "problemMatcher": []
+        },
+        {
+            "type": "gulp",
+            "task": "build",
+            "problemMatcher": []
         }
     ]
 }

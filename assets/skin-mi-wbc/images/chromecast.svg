@@ -1,20 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#FFFFFF;}
-</style>
-<g id="Rectangle_9_copy">
-	<g>
-		<path class="st0" d="M27.7,5.4H6.4c-1.2,0-2.1,1-2.1,2.1v2.1h2.1V7.5h21.3v12.8h-8.5v2.1h8.5c1.2,0,2.1-1,2.1-2.1V7.5
-			C29.8,6.3,28.9,5.4,27.7,5.4z"/>
-	</g>
-</g>
-<g id="Rectangle_12">
-	<g>
-		<path class="st0" d="M2.2,12.8v2.1c6.5,0,11.7,5.2,11.7,11.7H16C16,19,9.8,12.8,2.2,12.8z M2.2,18.1v2.1c3.5,0,6.4,2.9,6.4,6.4
-			h2.1C10.7,22,6.9,18.1,2.2,18.1z M2.2,23.4v3.2h3.2C5.4,24.8,4,23.4,2.2,23.4z"/>
-	</g>
-</g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <path id="Rectangle_9_copy" d="M27.7,5.4L6.4,5.4C5.2,5.4 4.3,6.4 4.3,7.5L4.3,9.6L6.4,9.6L6.4,7.5L27.7,7.5L27.7,20.3L19.2,20.3L19.2,22.4L27.7,22.4C28.9,22.4 29.8,21.4 29.8,20.3L29.8,7.5C29.8,6.3 28.9,5.4 27.7,5.4Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-opacity:0.541176;stroke-width:0.5px;"/>
+    <path id="Rectangle_12" d="M2.2,12.8L2.2,14.9C8.7,14.9 13.9,20.1 13.9,26.6L16,26.6C16,19 9.8,12.8 2.2,12.8ZM2.2,18.1L2.2,20.2C5.7,20.2 8.6,23.1 8.6,26.6L10.7,26.6C10.7,22 6.9,18.1 2.2,18.1ZM2.2,23.4L2.2,26.6L5.4,26.6C5.4,24.8 4,23.4 2.2,23.4Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-opacity:0.541176;stroke-width:0.5px;"/>
 </svg>

@@ -41,7 +41,7 @@ try {
 var player = bitmovin.player('player');
 
 // Add Hive goodness to the player
-bitmovin.initHiveSDN(player, {debugLevel: 'error', hiveTechOrder: ['HiveJava']});
+bitmovin.initHiveSDN(player, {debugLevel: 'info', hiveTechOrder: ['HiveJava']});
 
 // Configure Hive enabled player
 player.initSession(ticket).then(function(session) {

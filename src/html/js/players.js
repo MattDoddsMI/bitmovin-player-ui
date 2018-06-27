@@ -33,5 +33,9 @@ var players = {
   v7_5_2: {
     src: "stable/7.5.2",
     desc: "7.5.2"
+  },
+  v7_7_2: {
+    src: "stable/7.7.2",
+    desc: "7.7.2"
   }
 }

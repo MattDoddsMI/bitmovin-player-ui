@@ -6,6 +6,7 @@
   display: table;
 
   > .#{$prefix}-container-wrapper {
+    background-color: $color-black;
     display: table-cell;
     text-align: center;
     vertical-align: middle;
@@ -17,8 +18,8 @@
   @extend %center-items-in-overlay;
 
   @include layout-cover;
-  @include hidden;
-
+  @include hidden-animated;
+ 
   @keyframes breathe {
     30% {
       transform: scale(1.05);
@@ -28,15 +29,20 @@
       transform: scale(1);
     }
   }
+
+  background-color: linear-gradient(to bottom, rgb(235, 247, 5) 0%,rgba(125,126,125,1) 100%); //$color-black;
+    
+  .#{$prefix}-ui-audioonly-overlay-indicator {
+    @include hidden-animated;
+
+    animation: breathe 30s ease-in-out infinite;
+    background-image: svg('assets/skin-mi-wbc/images/audioonly.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 15vh;
+    width: 15vw;
+  }
 }
 
-.#{$prefix}-ui-audioonly-overlay-indicator {
-  animation: breathe 10s ease-in-out infinite;
-  background-color: $color-black;
-  background-image: svg('assets/skin-mi-wbc/images/audioonly.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-}
 

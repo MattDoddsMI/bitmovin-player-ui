@@ -37,6 +37,7 @@ player.setup(conf).then(function(value) {
     // Add UI to loaded player
     // uiManager = bitmovin.playerui.UIManager.Factory.buildDefaultUI(player, uiConfig);
     uiManager = bitmovin.playerui.UIManager.Factory.buildAudioVideoUI(player, uiConfig);
+    // uiManager = bitmovin.playerui.UIManager.Factory.buildAudioOnlyUI(player, uiConfig);
     // success
     logIt('#console-output', 'Created successfully - ' + bitmovin.player.version + '\n');
     $('#player-version').text(bitmovin.player.version);

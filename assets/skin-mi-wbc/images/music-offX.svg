@@ -1,35 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#1FABE2;}
-	.st1{opacity:0.3;fill:#1FABE2;}
-</style>
-<g id="Rectangle_2_copy_4">
-	<g>
-		<path class="st0" d="M12.2,13.1H6.4c-1.1,0-1.9,0.9-1.9,1.9v2c0,1.1,0.9,1.9,1.9,1.9h5.8c1.1,0,1.9-0.9,1.9-1.9v-2
-			C14.1,14,13.2,13.1,12.2,13.1z M12.2,17H6.4v-2h5.8C12.2,15,12.2,17,12.2,17z"/>
-	</g>
-</g>
-<g>
-	<g id="Rounded_Rectangle_3">
-		<g>
-			<path class="st0" d="M18.1,11.9c-0.4,0.4-0.4,1,0,1.4l6.8,6.8c0.4,0.4,1,0.4,1.4,0s0.4-1,0-1.4l-6.8-6.8
-				C19.1,11.5,18.5,11.5,18.1,11.9z"/>
-		</g>
-	</g>
-	<g id="Rounded_Rectangle_3_1_">
-		<g>
-			<path class="st0" d="M26.3,11.9c-0.4-0.4-1-0.4-1.4,0l-6.8,6.8c-0.4,0.4-0.4,1,0,1.4s1,0.4,1.4,0l6.8-6.8
-				C26.7,12.9,26.7,12.3,26.3,11.9z"/>
-		</g>
-	</g>
-</g>
-<g>
-	<path class="st0" d="M17.9,21.7v2l-9.6-7v2.5l10,7.1c0.2,0.1,0.4,0.2,0.6,0.2s0.3,0,0.5-0.1c0.3-0.2,0.6-0.5,0.6-0.9v-3.9
-		L17.9,21.7L17.9,21.7z"/>
-	<path class="st0" d="M17.9,10.3H20v-4c-0.1-0.4-0.3-0.7-0.7-0.9c-0.3-0.2-0.8-0.1-1.1,0.1l-9.9,7.1v2.5l9.6-6.9V10.3z"/>
-</g>
-<polygon class="st1" points="9.5,12.3 9.5,14.2 6,14.2 6,17.7 9.5,17.7 9.5,18.9 19.2,25.2 19.2,6.5 "/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g>
+        <path id="Rounded_Rectangle_3" d="M22.2,14.6L24.9,11.9C25.3,11.5 25.9,11.5 26.3,11.9C26.7,12.3 26.7,12.9 26.3,13.3L23.6,16L26.3,18.7C26.7,19.1 26.7,19.7 26.3,20.1C25.9,20.5 25.3,20.5 24.9,20.1L22.2,17.4L19.5,20.1C19.1,20.5 18.5,20.5 18.1,20.1C17.7,19.7 17.7,19.1 18.1,18.7L20.8,16L18.1,13.3C17.7,12.9 17.7,12.3 18.1,11.9C18.5,11.5 19.1,11.5 19.5,11.9L22.2,14.6Z" style="fill:rgb(204,204,204);fill-rule:nonzero;stroke:black;stroke-opacity:0.541176;stroke-width:0.5px;"/>
+    </g>
+    <g>
+        <path id="Rectangle_2_copy_4" d="M8.3,13.1L8.3,12.6L18.2,5.5C18.5,5.3 19,5.2 19.3,5.4C19.7,5.6 19.9,5.9 20,6.3L20,10.3L17.9,10.3L17.9,8.2L11.083,13.1L12.2,13.1C13.2,13.1 14.1,14 14.1,15L14.1,17C14.1,18 13.3,18.9 12.2,18.9L11.317,18.9L17.9,23.7L17.9,21.7L20,21.6L20,25.5C20,25.9 19.7,26.2 19.4,26.4C19.2,26.5 19.1,26.5 18.9,26.5C18.7,26.5 18.5,26.4 18.3,26.3L8.3,19.2L8.3,18.9L6.4,18.9C5.4,18.9 4.5,18.1 4.5,17L4.5,15C4.5,14 5.3,13.1 6.4,13.1L8.3,13.1ZM8.439,15L8.3,15.1L8.3,15L6.4,15L6.4,17L8.3,17L8.3,16.7L8.711,17L12.2,17L12.2,15L8.439,15Z" style="fill:rgb(204,204,204);fill-rule:nonzero;stroke:black;stroke-opacity:0.541176;stroke-width:0.5px;"/>
+    </g>
+    <path d="M9.5,12.3L9.5,14.2L6,14.2L6,17.7L9.5,17.7L9.5,18.9L19.2,25.2L19.2,6.5L9.5,12.3Z" style="fill:none;"/>
 </svg>
