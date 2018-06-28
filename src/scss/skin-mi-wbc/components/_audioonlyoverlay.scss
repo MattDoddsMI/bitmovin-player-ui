@@ -30,12 +30,12 @@
     }
   }
 
-  background-color: linear-gradient(to bottom, rgb(235, 247, 5) 0%,rgba(125,126,125,1) 100%); //$color-black;
+  background-color: $color-black;
     
   .#{$prefix}-ui-audioonly-overlay-indicator {
     @include hidden-animated;
 
-    animation: breathe 30s ease-in-out infinite;
+    animation: breathe 10s ease-in-out infinite;
     background-image: svg('assets/skin-mi-wbc/images/audioonly.svg');
     background-position: center;
     background-repeat: no-repeat;
