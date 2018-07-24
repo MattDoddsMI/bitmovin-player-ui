@@ -19,7 +19,7 @@
 
   @include layout-cover;
   @include hidden-animated;
- 
+
   @keyframes breathe {
     30% {
       transform: scale(1.05);
@@ -31,7 +31,7 @@
   }
 
   background-color: $color-black;
-    
+
   .#{$prefix}-ui-audioonly-overlay-indicator {
     @include hidden-animated;
 
