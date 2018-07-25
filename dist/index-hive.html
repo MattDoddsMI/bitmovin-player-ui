@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- CSS //-->
+    <link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous" />
+    <!-- Load the custom UI CSS //-->
+    <link type="text/css" rel="stylesheet" href="css/mi-wbc-ui.css" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" /><link href="//fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" />
+
+    <!-- JS //-->
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/players.js"></script>
+
+    <!-- Load the player version //-->
+    <script type="text/javascript">
+    //<![CDATA[
+      var theLoc = new URL(location.href);
+      document.write("<script src='" + playerUrlPrefix + (theLoc.searchParams.get("v") || "stable/7") + playerUrlSuffix + "'><\/script>");
+    //]]>
+    </script>
+    <!-- <script src="//bitmovin-a.akamaihd.net/bitmovin-player/stable/7/bitmovinplayer.js" defer="defer"></script> -->
+    <!-- Load the custom UI JS //-->
+    <script src="js/wbc-player-ui.js" defer="defer"></script>
+
+    <!-- Choose the appropriate Hive plugin version //-->
+    <script type="text/javascript">
+      //<![CDATA[
+        var theLoc = new URL(location.href);
+        if("stable/7.1.3" === theLoc.searchParams.get("v")) {
+          document.write("<script src='js/bitmovin.hive.3.1.0.min.js'><\/script>");
+        }
+        else if("stable/7.5.2" === theLoc.searchParams.get("v") || "stable/7.7.2" === theLoc.searchParams.get("v")) {
+          document.write("<script src='js/bitmovin.hive.3.5.1.min.js'><\/script>");
+        }
+        else {
+          alert("No available Hive plugin for this player version.")
+        };
+      //]]>
+      </script>
+
+    <script src="js/sources.js"></script>
+    <script src="js/config-hive.js" defer="defer"></script>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-right">
+          <img src="//www.movingimage.com/wp-content/themes/movingimage/img/movingimage_logo.svg" style="padding-top: 7px; width: 180px;" />
+          <div>WBC Custom Player Skins – <span id="player-version"></span></div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="player" class="col-sm-12"></div>
+      </div>
+      <div class="row">
+        <div id="source" class="col-sm-12">
+          <div class="col-sm-1"><div class="form-label">Version: </div></div>
+          <div class="col-sm-4"><select class="form-control" id="config-version"></select></div>
+          <div class="col-sm-1"><div class="form-label">UI: </div></div>
+          <div class="col-sm-3"><select class="form-control" id="config-ui"></select></div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="console" class="col-sm-12">
+          <div class="col-sm-1"><div class="form-label">Console: </div></div>
+          <div class="col-sm-11">
+            <textarea id="console-output"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

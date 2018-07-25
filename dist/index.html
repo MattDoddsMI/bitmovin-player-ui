@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- CSS //-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- Load the custom UI CSS //-->
+    <link type="text/css" rel="stylesheet" href="css/mi-wbc-ui.css" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" /><link href="//fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" />
+
+    <!-- JS //-->
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/players.js"></script>
+
+    <!-- Load the player version //-->
+    <script type="text/javascript">
+    //<![CDATA[
+      var theLoc = new URL(location.href);
+      document.write("<script src='" + playerUrlPrefix + (theLoc.searchParams.get("v") || "stable/7") + playerUrlSuffix + "'><\/script>");
+    //]]>
+    </script>
+    <!-- <script src="//bitmovin-a.akamaihd.net/bitmovin-player/stable/7/bitmovinplayer.js" defer="defer"></script> -->
+    <!-- Load the custom UI JS //-->
+    <script src="js/wbc-player-ui.js" defer="defer"></script>
+
+    <script src="js/sources.js"></script>
+    <script src="js/config.js" defer="defer"></script>
+    <!-- <script src="js/monitoring.js" defer="defer"></script> -->
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-right">
+          <img src="img/movingimage_logo.svg" style="padding-top: 7px; width: 180px;" />
+          <div>WBC Custom Player Skins – <span id="player-version"></span></div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="player" class="col-sm-12"></div>
+      </div>
+      <div class="row">
+        <div id="source" class="col-sm-12">
+          <div class="col-sm-1"><div class="form-label">Source: </div></div>
+          <div class="col-sm-2"><select class="form-control" id="config-source"></select></div>
+          <div class="col-sm-1"><div class="form-label">Version: </div></div>
+          <div class="col-sm-4"><select class="form-control" id="config-version"></select></div>
+          <div class="col-sm-1"><div class="form-label">UI: </div></div>
+          <div class="col-sm-3"><select class="form-control" id="config-ui"></select></div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="console" class="col-sm-12">
+          <div class="col-sm-1"><div class="form-label">Console: </div></div>
+          <div class="col-sm-11">
+            <textarea id="console-output"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

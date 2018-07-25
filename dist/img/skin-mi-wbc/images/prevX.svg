@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <path id="Rectangle_2_copy_3" d="M11.2,5.4L8.9,5.4C7.6,5.4 6.6,6.5 6.6,7.7L6.6,24.1C6.6,25.4 7.7,26.4 8.9,26.4L11.2,26.4C12.5,26.4 13.5,25.3 13.5,24.1L13.5,7.8C13.6,6.5 12.5,5.4 11.2,5.4ZM11.2,24.2L8.9,24.2L8.9,7.8L11.2,7.8L11.2,24.2Z" style="fill:rgb(204,204,204);fill-rule:nonzero;stroke:black;stroke-opacity:0.541176;stroke-width:0.5px;"/>
+    <path id="Shape_3" d="M25.8,5.5C25.4,5.3 24.9,5.4 24.5,5.6L11.7,15C11.5,15.1 11.2,15.6 11.2,15.9C11.2,16.2 11.4,16.7 11.7,17L24.5,26.4C24.7,26.5 25,26.6 25.2,26.6C25.4,26.6 25.6,26.6 25.8,26.5C26.2,26.3 26.5,25.9 26.5,25.4L26.5,6.6C26.5,6.2 26.2,5.8 25.8,5.5ZM24,22.9L14.5,16L24,9.1L24,22.9Z" style="fill:rgb(204,204,204);fill-rule:nonzero;stroke:black;stroke-opacity:0.541176;stroke-width:0.5px;"/>
+    <rect x="8.4" y="7.2" width="3.2" height="17.4" style="fill:none;"/>
+    <path d="M25.6,24.4L14,17.7L14,14.3L25.6,7.2L25.6,24.4Z" style="fill:none;"/>
+</svg>
