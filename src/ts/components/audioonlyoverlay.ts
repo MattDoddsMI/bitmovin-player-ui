@@ -1,5 +1,5 @@
-import {ContainerConfig, Container} from './container';
-import {UIInstanceManager} from '../uimanager';
+import {Container, ContainerConfig} from './container';
+import {MIUIConfig, UIAudioOnlyOverlayConfig, UIInstanceManager} from '../uimanager';
 import {Component, ComponentConfig} from './component';
 import {Timeout} from '../timeout';
 
@@ -13,42 +13,61 @@ export interface AudioOnlyOverlayConfig extends ContainerConfig {
  * Overlays the player and displays an audio-only indicator.
  */
 export class AudioOnlyOverlay extends Container<AudioOnlyOverlayConfig> {
+    private indicatorConfig: Component<ComponentConfig>[];
+    private componentConfig: UIAudioOnlyOverlayConfig;
 
-  private indicator: Component<ComponentConfig>[];
+    constructor(config: AudioOnlyOverlayConfig = {}) {
+        super(config);
 
-  constructor(config: AudioOnlyOverlayConfig = {}) {
-    super(config);
+        this.indicatorConfig = [
+            new Component<ComponentConfig>({tag: 'div', cssClass: 'ui-audioonly-overlay-indicator', hidden: true}),
+        ];
 
-    this.indicator = [
-      new Component<ComponentConfig>({ tag: 'div', cssClass: 'ui-audioonly-overlay-indicator', hidden: true }),
-    ];
+        this.config = this.mergeConfig(config, <AudioOnlyOverlayConfig>{
+            cssClass: 'ui-audioonly-overlay',
+            hidden: false,
+            components: this.indicatorConfig,
+        }, this.config);
+    }
 
-    this.config = this.mergeConfig(config, <AudioOnlyOverlayConfig>{
-      cssClass: 'ui-audioonly-overlay',
-      hidden: false,
-      components: this.indicator,
-    }, this.config);
-  }
+    configure(player: bitmovin.PlayerAPI, uimanager: UIInstanceManager): void {
+        super.configure(player, uimanager);
 
-  configure(player: bitmovin.PlayerAPI, uimanager: UIInstanceManager): void {
-    super.configure(player, uimanager);
+        this.componentConfig = (uimanager.getConfig() as MIUIConfig).audioOnlyOverlayConfig || {};
+        const config = <AudioOnlyOverlayConfig>this.getConfig();
+        const indicator = config.components[0];
 
-    let config = <AudioOnlyOverlayConfig>this.getConfig();
+        const backgroundImageUrl = this.componentConfig.backgroundImageUrl;
+        const element = this.getDomElement();
 
-    let overlayShowTimeout = new Timeout(400, () => {
-      config.components[0].show();
-    });
+        const showBackgroundImage = () => {
+            element.css('backgroundImage', `url(${backgroundImageUrl})`);
+            element.css('backgroundSize', 'contain');
+            element.css('backgroundColor', '#000000');
+            element.css('animation', 'none');
+            element.css('backgroundPosition', 'center');
+        };
 
-    let showOverlay = () => {
-      overlayShowTimeout.start();
-    };
+        const overlayShowTimeout = new Timeout(400, () => {
+            indicator.show();
+        });
 
-    let hideOverlay = () => {
-      overlayShowTimeout.clear();
-      config.components[0].hide();
-    };
+        const showOverlay = () => {
+            overlayShowTimeout.start();
+        };
 
-    player.addEventHandler(player.EVENT.ON_PLAY, showOverlay);
-    player.addEventHandler(player.EVENT.ON_PAUSED, hideOverlay);
-  }
+        const hideOverlay = () => {
+            overlayShowTimeout.clear();
+            indicator.hide();
+        };
+
+        if (backgroundImageUrl) {
+            showBackgroundImage();
+        }
+
+        if (!this.componentConfig.hiddeIndicator) {
+            player.addEventHandler(player.EVENT.ON_PLAY, showOverlay);
+            player.addEventHandler(player.EVENT.ON_PAUSED, hideOverlay);
+        }
+    }
 }
