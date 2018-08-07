@@ -29,15 +29,26 @@
     <script type="text/javascript">
       //<![CDATA[
         var theLoc = new URL(location.href);
-        if("stable/7.1.3" === theLoc.searchParams.get("v")) {
-          document.write("<script src='js/bitmovin.hive.3.1.0.min.js'><\/script>");
+        switch(theLoc.searchParams.get("h")) {
+          case "3.1.0": 
+            document.write("<script src='js/bitmovin.hive.3.1.0.min.js'><\/script>");
+            break;
+
+          case "3.5.1": 
+            document.write("<script src='js/bitmovin.hive.3.5.1.min.js'><\/script>");
+            break;
+
+          case "4.0.0": 
+            document.write("<script src='js/bitmovin.hive.4.0.0.min.js'><\/script>");
+            break;
+
+          case "4.1.0": 
+            document.write("<script src='js/bitmovin.hive.4.1.0.min.js'><\/script>");
+          break;
+
+          default:
+            alert("No available Hive plugin for this player version.")
         }
-        else if("stable/7.5.2" === theLoc.searchParams.get("v") || "stable/7.7.2" === theLoc.searchParams.get("v")) {
-          document.write("<script src='js/bitmovin.hive.3.5.1.min.js'><\/script>");
-        }
-        else {
-          alert("No available Hive plugin for this player version.")
-        };
       //]]>
       </script>
 
@@ -50,8 +61,8 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 text-right">
-          <img src="//www.movingimage.com/wp-content/themes/movingimage/img/movingimage_logo.svg" style="padding-top: 7px; width: 180px;" />
-          <div>WBC Custom Player Skins – <span id="player-version"></span></div>
+          <img src="img/movingimage_logo.svg" style="padding-top: 7px; width: 180px;" />
+          <div>WBC Custom Player Skins – <span id="player-version"></span> – 📹 <a href="index.html?v=stable/7">Standard</a></div>
         </div>
       </div>
       <div class="row">

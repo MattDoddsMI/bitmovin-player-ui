@@ -26,7 +26,7 @@ var conf = {
 // Simple logging function
 function logIt(element, newText) {
   $(element).val(function(i, curText) {
-    return curText + newText + '\n';
+    return curText + '\n' + new Date().toLocaleTimeString() + ' ' + newText;
   });
 }
 
