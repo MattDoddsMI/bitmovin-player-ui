@@ -246,3 +246,13 @@ All of the configuration properties are optional. If `metadata` is set, it overw
 The UI playground can be launched with `gulp serve` and opens a page in a local browser window. On this page, you can switch between different sources and UI styles, trigger API actions and observe events.
 
 This page uses BrowserSync to sync the state across multiple tabs and browsers and recompiles and reloads automatically files automatically when any `.scss` or `.ts` files are modified. It makes a helpful tool for developing and testing the UI.
+
+## Testing different versions via the URL
+
+You can use URL parameters to directly change the player version, by appending `?v=stable/x.y.z` to `index.html`. You can alter the release branch between `stable` and `beta`, and the version numbers either as "latest" using `x` or a specific version `x.y.z`.
+
+For example: http://localhost:9000/index.html?v=stable/7 will load the latest stable version 7 player.
+
+For the Hive page, you can also change the plugin version, by appending `?h=x.y.z` where valid version numbers are `3.1.0`, `3.5.1`, `4.0.0` or `4.1.0`. You can add a specific Hive ticket, by appending `?t=Ticket_ID`.
+
+For exmaple: http://localhost:9000/index-hive.html?v=stable/7&h=4.1.0&t=https://api.hivestreaming.com/v1/events/9002/10001/3049/bnEbPtk6tHXNfntY will load the latest stable version 7 player, using the 4.1.0 Hive plugin, and requesting the demonstration ticket from Hive.
