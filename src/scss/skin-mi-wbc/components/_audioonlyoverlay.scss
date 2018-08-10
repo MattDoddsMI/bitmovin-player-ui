@@ -6,7 +6,6 @@
   display: table;
 
   > .#{$prefix}-container-wrapper {
-    background-color: $color-black;
     display: table-cell;
     text-align: center;
     vertical-align: middle;
@@ -30,8 +29,7 @@
     }
   }
 
-  background-color: $color-black;
-  background-repeat: no-repeat;
+  background: $color-black no-repeat;
 
   .#{$prefix}-ui-audioonly-overlay-indicator {
     @include hidden-animated;
