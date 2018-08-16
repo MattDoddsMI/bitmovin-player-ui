@@ -243,7 +243,7 @@ gulp.task('serve', function() {
   runSequence(['build'], function() {
     browserSync({
       notify: false,
-      port: 80,
+      port: 9000,
       server: {
         baseDir: [paths.target.html]
       }
