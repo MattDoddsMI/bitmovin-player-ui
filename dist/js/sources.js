@@ -32,7 +32,7 @@ var sources = {
     title: "DVR Source (jp)"
   },
   liveKollective: {
-    hls: "urn:kid:eval:mi:moid:2b642b2f-06f4-400f-ad48-f2eab5ac8445",
+    hls: "urn:kid:eval:mi:moid:2b642b2f-06f4-400f-ad48-f2eab5ac8444",
     title: "Kollective Live Source",
     auth: "srv-NjY5NmRkODEtNDI4Zi00NDRlLWE3MTgtZTgwY2MyNWUzMmVl",
     fallbackSrc: "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",

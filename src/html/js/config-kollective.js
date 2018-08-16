@@ -1,4 +1,4 @@
-import * as koll from './plugin-bitmovin-kollective.js';
+import * as koll from './bitmovin.kollective.0.1.0.js';
 
 var loadTimer = performance.now();
 var uiConfig;
@@ -7,7 +7,7 @@ var uiManager;
 var conf = {
   key: 'e28cc092-28eb-4f25-aa30-ed9e5b878668',
   source: {
-    //hls: sources.liveKollective.hls
+    //hls: sources.liveKollective.hls // will not work, player.conf() will reject as invalid URL, so we pass it in the player setup.
   },
   style: {
     ux: false
